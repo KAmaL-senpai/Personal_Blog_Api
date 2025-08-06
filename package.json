@@ -1,6 +1,9 @@
 {
   "main": "server.js",
   "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",
     "@fastify/mysql": "^5.0.2",
