@@ -9,6 +9,8 @@ import authPlugin from "./middlewares/AuthMiddleware.js";
 import fastifySwagger from "@fastify/swagger";
 import fastifySwaggerUi from "@fastify/swagger-ui";
 
+const PORT = process.env.PORT || 5000;
+
 const fastify = Fastify({
   logger: {
     transport: {
@@ -70,7 +72,7 @@ fastify.get("/", (req, res) => {
   res.send("Working");
 });
 
-fastify.listen({ port: 5000 }, (err, address) => {
+fastify.listen({ port: Number(PORT), host: "0.0.0.0" }, (err, address) => {
   if (err) throw err;
   console.log(`Server listening at ${address}`);
 });
