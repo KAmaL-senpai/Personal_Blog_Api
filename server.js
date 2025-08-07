@@ -16,8 +16,8 @@ const fastify = Fastify({
     transport: {
       target: "pino-pretty",
       options: {
-        translateTime: "SYS:Standard", // Format timestamp
-        ignore: "pid,hostname", // Ignore specific fields
+        translateTime: "SYS:Standard", 
+        ignore: "pid,hostname", 
       },
     },
   },
